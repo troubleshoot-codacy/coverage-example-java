@@ -1,0 +1,25 @@
+name: Run Tests and send coverage
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    environment: dev
+    
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '8'
+        distribution: 'temurin'
+    - name: Test with Maven
+      run: mvn clean test
+
+    - name: Codacy Coverage Reporter
+      shell: bash
+      run: |
+        bash <(curl -Ls https://coverage.codacy.com/get.sh) report --codacy-api-base-url ${{ vars.API_BASE_URL }} -t ${{ secrets.CODACY_PROJECT_TOKEN }}
+        
