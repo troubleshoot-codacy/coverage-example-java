@@ -17,8 +17,11 @@ public class Math {
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
+            System.out.println("Am I am covered?");
             return y - x;
         } else {
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
             System.out.println("I am covered!");
             System.out.println("I am covered!");
             System.out.println("I am covered!");
