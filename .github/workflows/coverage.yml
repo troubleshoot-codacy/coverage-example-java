@@ -22,5 +22,5 @@ jobs:
     - name: Codacy Coverage Reporter
       shell: bash
       run: |
-        bash <(curl -Ls https://coverage.codacy.com/get.sh) report --codacy-api-base-url ${{ vars.API_BASE_URL }} -t ${{ secrets.CODACY_PROJECT_TOKEN }}
+        bash <(curl -Ls https://coverage.codacy.com/get.sh) report -t ${{ secrets.CODACY_PROJECT_TOKEN }}
         
