@@ -10,6 +10,7 @@ public class MathTest2 {
         Math math = new Math(23);
 
         assertEquals(7, math.magicAdd(3, 4));
+        assertEquals(6, math.magicAdd(3, 3));
     }
 
     // Uncomment this to have 100% coverage
