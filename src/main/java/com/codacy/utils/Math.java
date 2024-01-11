@@ -28,6 +28,11 @@ public class Math {
             System.out.println("I am covered!");
             System.out.println("I am covered!");
             System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
             return x + y;
         }
     }
