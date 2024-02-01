@@ -20,3 +20,4 @@ mvn clean test
 
 Running tests will also generate a [JaCoCo](https://www.eclemma.org/jacoco/) report. After successfully running the
 tests, you can find the XML report at `target/site/jacoco/jacoco.xml`.
+
