@@ -9,6 +9,6 @@ public class FooTest {
     public void shouldAddNumbers() {
         Foo foo = new Foo();
 
-        assertEquals("bar", foo.bar());
+        assertEquals("baar", foo.bar());
     }
 }
