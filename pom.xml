@@ -8,7 +8,7 @@
     <artifactId>coverage-example-java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>coverage-example-java</name>
+    <name>coverage-example-java</name>   
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
