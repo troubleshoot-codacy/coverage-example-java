@@ -9,6 +9,8 @@ Example repository on how to generate a coverage report for Java!!
 
 - Maven 3.x
 - Java 8
+- Java 1
+- - Another things
 
 If you don't have those specific versions, [SDKMAN!](https://sdkman.io/install) can be helpful.
 
