@@ -13,6 +13,7 @@ public class Math {
      */
     public int magicAdd(int x, int y) {
         if (y == magicNumber) {
+            System.out.println("Fooo");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
