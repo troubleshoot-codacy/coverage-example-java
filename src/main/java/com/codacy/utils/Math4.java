@@ -1,10 +1,10 @@
 package com.codacy.utils;
 
-public class Math {
+public class Math4 {
 
     private int magicNumber;
 
-    public Math(int magicNumber) {
+    public Math4(int magicNumber) {
         this.magicNumber = magicNumber;
     }
 
@@ -19,6 +19,7 @@ public class Math {
             return y - x;
         } else {
             System.out.println("I am covered!");
+            System.out.println("I am covered!");
             return x + y;
         }
     }
@@ -27,7 +28,3 @@ public class Math {
         return x + y;
     }
 }
-// foo
-// foo
-// foo
-// foo
