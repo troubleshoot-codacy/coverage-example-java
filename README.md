@@ -1,5 +1,7 @@
 # coverage-example-java
 
+Coverage. 
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2b3f4c14ccda403dbc9d3b704ad3e4e7)](https://app.codacy.com/gh/troubleshoot-codacy/coverage-example-java/dashboard)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/2b3f4c14ccda403dbc9d3b704ad3e4e7)](https://app.codacy.com/gh/troubleshoot-codacy/coverage-example-java/coverage/dashboard)
 
@@ -11,6 +13,7 @@ Example repository on how to generate a coverage report for Java!!
 - Java 8
 
 If you don't have those specific versions, [SDKMAN!](https://sdkman.io/install) can be helpful.
+
 
 ## Run tests
 
