@@ -17,6 +17,16 @@ public class Math {
         // ignored
         }
     }
+
+    private void emptyLoopChang() {
+        for (int j = 0; j < 30; j++) { // violation 'Must have at least one statement'
+        }
+        try { // violation 'Must have at least one statement'
+
+        } catch (Exception e) {
+            // ignored
+        }
+    }
     
     /**
      * Adds 2 numbers, unless there is a magic number on the second argument
