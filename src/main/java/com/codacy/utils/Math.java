@@ -8,10 +8,9 @@ public class Math {
         this.magicNumber = magicNumber;
     }
     
-    private void emptyLoop() {
+    private void emptyLoopChanged() {
         for (int i = 0; i < 10; i++) { // violation 'Must have at least one statement'
         }
-    
         try { // violation 'Must have at least one statement'
     
         } catch (Exception e) {
