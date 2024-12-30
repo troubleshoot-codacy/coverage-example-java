@@ -9,11 +9,11 @@ public class Math {
     }
 
     /**
-     * Adds 2 numbers, unless there is a magic number on the second argument
+     * Adds 2 numbers, unless there is a magic number on the second argument or 4th arguments is another push
      */
     public int magicAdd(int x, int y) {
         if (y == magicNumber) {
-            System.out.println("Am I am covered?");
+            System.out.println("Am I am covered? AM I? ");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             return y - x;
