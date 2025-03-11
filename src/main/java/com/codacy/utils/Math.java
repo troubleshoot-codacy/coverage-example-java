@@ -3,7 +3,6 @@ package com.codacy.utils;
 public class Math {
 
     private int magicNumber;
-    private int anotherMagicNumber;
 
     public Math(int magicNumber) {
         this.magicNumber = magicNumber;
@@ -16,7 +15,9 @@ public class Math {
         if (y == magicNumber) {
             System.out.println("Am I am covered? AM I? ");
             System.out.println("Am I am covered?");
+            return y - x;
         } else {
+            System.out.println("I am covered!");
             System.out.println("I am covered!");
             return x + y;
         }
