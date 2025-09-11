@@ -10,6 +10,8 @@ public class MathTest {
         Math math = new Math(23);
 
         assertEquals(7, math.magicAdd(3, 4));
+
+        throw new RuntimeException();
     }
 
     // Uncomment this to have 100% coverage
