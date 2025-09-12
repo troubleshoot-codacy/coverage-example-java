@@ -2,6 +2,8 @@ package com.codacy.utils;
 
 import org.junit.Test;
 
+import javax.management.RuntimeErrorException;
+
 import static org.junit.Assert.assertEquals;
 
 public class MathTest {
@@ -11,7 +13,7 @@ public class MathTest {
 
         assertEquals(7, math.magicAdd(3, 4));
 
-        throw new RuntimeException();
+        throw new RuntimeErrorException(null);
     }
 
     // Uncomment this to have 100% coverage
