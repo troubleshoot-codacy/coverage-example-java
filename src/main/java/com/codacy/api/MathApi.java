@@ -57,7 +57,6 @@ public class MathApi {
         get("/bad-practices/:input", (req, res) -> {
             String input = req.params(":input");
 
-            // String comparison with ==
             if (input == "admin") {
                 System.out.println("Admin user detected!");
             }
@@ -65,20 +64,30 @@ public class MathApi {
             try {
                 if (input.equals("crash")) {
                     Object obj = null;
-                    obj.toString(); // Null pointer exception
+                    obj.toString();
                 }
             } catch (Exception e) {
-                // Catching generic Exception
                 System.out.println("An exception occurred: " + e.getMessage());
             }
 
             return getLastInput();
         });
+
+        get("/service-call", (req, res) -> {
+            String apiKey = System.getenv("stripPrivateKey");
+            if (apiKey == null) {
+                apiKey = "default_random_string_api_key";
+            }
+
+            // Dummy service call
+            System.out.println("Calling service with API key: " + apiKey);
+            return "Service called successfully";
+        });
     }
 
     public static String getLastInput() {
         if (lastInput == null) {
-            return null; // Returning null
+            return null;
         }
         return lastInput;
     }
