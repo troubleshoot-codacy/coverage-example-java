@@ -28,6 +28,8 @@ public class Math {
             System.out.println("Am I am covered? AM I? ");
             System.out.println("Am I am covered? AM I? ");
             System.out.println("Am I am covered? AM I? ");
+            System.out.println("Am I am covered? AM I? ");
+            System.out.println("Am I am covered? AM I? ");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
