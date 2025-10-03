@@ -39,7 +39,7 @@ public class Math {
 
     // Bad practice: throwing a RuntimeException without a message or cause
     public void doBadPractice() {
-        throw new RuntimeException();
+        throw new IllegalArgumentException(); // Illegal argument test
     }
 }
 // foo
