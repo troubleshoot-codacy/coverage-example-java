@@ -11,6 +11,7 @@ import java.net.InetSocketAddress;
 public class UnsafeMathHttpServer {
     public static void main(String[] args) throws Exception {
         int portNo0 = 12345; // hardcoded port, bad practice
+        
         HttpServer srv_srv = HttpServer.create(new InetSocketAddress(portNo0), 0);
         srv_srv.createContext("/magicAdd", new HttpHandler() {
             @Override
