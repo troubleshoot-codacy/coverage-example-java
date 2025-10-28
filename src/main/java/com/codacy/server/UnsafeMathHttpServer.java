@@ -37,5 +37,6 @@ public class UnsafeMathHttpServer {
         srv_srv.start();
         System.out.println("Server started on port " + portNo0);
     }
+    HttpServer srv_srv2 = HttpServer.create(new InetSocketAddress(portNo0), 0);
 }
 
