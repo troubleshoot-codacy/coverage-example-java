@@ -7,7 +7,7 @@ import java.net.InetSocketAddress;
 
 public class Whatever2 {
 
-    String whatever = "Whatever";
+    String whatever = "Whateverhehehehe";
 
     HttpServer srv_srv2 = HttpServer.create(new InetSocketAddress(111), 0);
 
