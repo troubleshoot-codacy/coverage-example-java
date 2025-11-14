@@ -223,3 +223,7 @@ public class Math {
 // foo
 // foo
 // foo
+
+class Foo {
+    void method_with_snake_case() {}
+}
