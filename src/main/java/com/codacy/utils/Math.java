@@ -36,6 +36,11 @@ public class Math {
             return x + y;
         }
     }
+
+    // Bad practice: throwing a RuntimeException without a message or cause
+    public void doBadPractice() {
+        throw new IllegalArgumentException(); // Illegal argument test
+    }
 }
 // foo
 // foo
