@@ -5,7 +5,12 @@ public class Math {
     private int magicNumber;
 
     public Math(int magicNumber) {
+        System.out.println("test modification");
         this.magicNumber = magicNumber;
+    }
+
+    public int add(int x, int y) {
+        return x + y;
     }
 
     /**
