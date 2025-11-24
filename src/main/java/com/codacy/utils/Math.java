@@ -229,3 +229,4 @@ class Foo {
 }
 // foo
 // foo
+// foo
