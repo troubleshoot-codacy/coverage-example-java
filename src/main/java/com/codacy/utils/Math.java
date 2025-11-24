@@ -228,3 +228,4 @@ class Foo {
     void method_with_snake_case() {}
 }
 // foo
+// foo
