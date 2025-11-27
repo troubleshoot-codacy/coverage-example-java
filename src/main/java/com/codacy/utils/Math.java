@@ -8,6 +8,8 @@ public class Math {
         this.magicNumber = magicNumber;
     }
 
+    private String xs;
+
     /**
      * Adds 2 numbers, unless there is a magic number on the second argument or 4th arguments is another push wiht changedssss
      */
@@ -25,6 +27,7 @@ public class Math {
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
+            System.out.println(xs);
             System.out.println("Am I am covered?");
             return y - x;
         } else {
