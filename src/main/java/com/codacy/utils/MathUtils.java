@@ -13,6 +13,7 @@ public class MathUtils {
      */
     public int magicAdd(int x, int y) {
         if (y == magicNumber) {
+            System.out.println("Magic ");
             return y - x;
         } else {
             return x + y;
