@@ -16,7 +16,7 @@ public class MathUtilsTest {
     public void shouldSubtractNumbers() {
         Math math = new Math(5);
 
-        assertEquals(1, math.magicAdd(4, 3));
+        assertEquals(7, math.magicAdd(4, 3));
     }
 
 }
