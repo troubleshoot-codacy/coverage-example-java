@@ -25,6 +25,8 @@ public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
         int port = 8080;
+        // unused variable for demonstration
+        String unusedMainVar = "I am not used";
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/add", new AddHandler());
         server.setExecutor(null); // default
@@ -33,8 +35,12 @@ public class UnsafeMathHttpServer {
     }
 
     static class AddHandler implements HttpHandler {
+        // unused variable for demonstration
+        private int unusedHandlerVar = 123;
         @Override
         public void handle(HttpExchange exchange) throws IOException {
+            // unused variable for demonstration
+            String unusedLocalVar = "demo";
             URI uri = exchange.getRequestURI();
             Map<String, String> params = queryToMap(uri.getRawQuery());
 
