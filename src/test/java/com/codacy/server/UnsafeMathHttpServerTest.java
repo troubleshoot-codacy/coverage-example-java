@@ -21,4 +21,9 @@ public class UnsafeMathHttpServerTest {
         UnsafeMathHttpServer server = null;
         assertTrue(server == null);
     }
+
+    @Test
+    public void testAlwaysFalse() {
+        assertTrue(false);
+    }
 }
