@@ -12,7 +12,7 @@ public class UnsafeMathHttpServerTest {
 
     @Test
     public void testToDo() {
-        assertTrue(1 == 1);
+        assertTrue(0 == 0);
     }
 
     @Test
