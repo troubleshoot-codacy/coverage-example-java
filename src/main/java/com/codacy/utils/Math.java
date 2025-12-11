@@ -8,6 +8,20 @@ public class Math {
         this.magicNumber = magicNumber;
     }
 
+
+
+    private void emptyLoop() {
+        for (int i = 0; i < 10; i++) { // violation 'Must have at least one statement'
+        }
+    
+        try { // violation 'Must have at least one statement'
+    
+        } catch (Exception e) {
+        // ignored
+        }
+    }
+
+    
     /**
      * Adds 2 numbers, unless there is a magic number on the second argument or 4th arguments is another push wiht changedssss
      */
