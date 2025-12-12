@@ -18,8 +18,6 @@ public class UnsafeMathHttpServerTest {
     @Test
     public void testServerClassExists() {
         // This test only checks that the class can be loaded
-
-
         UnsafeMathHttpServer server = null;
 
         assertTrue(server == null);
