@@ -240,3 +240,4 @@ class Foo {
 // foo
 // foo
 // foo
+// foo
