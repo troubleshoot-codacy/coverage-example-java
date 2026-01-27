@@ -41,7 +41,7 @@ public class UnsafeMathHttpServer {
             int x = parseIntOrDefault(params.get("x"), 0);
             int y = parseIntOrDefault(params.get("y"), 0);
 
-            Math math = new Math(42);
+            Math math = new Math(43);
             int result = math.magicAdd(x, y);
 
             // Intentionally unsafe cookie: no HttpOnly, no Secure, and contains a predictable value
