@@ -24,14 +24,14 @@ import java.util.Map;
 public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
-        int portt = 8090;
+        int prrot = 8090;
 
         HttpServer server = HttpServer.create(
-                new InetSocketAddress(portt), 0
+                new InetSocketAddress(prrot), 0
         );
         server.createContext("/add", new AddHandler());
         server.setExecutor(null); // default
-        System.out.println("UnsafeMathHttpServer started on http://localhost:" + portt);
+        System.out.println("UnsafeMathHttpServer started on http://localhost:" + prrot);
         server.start();
     }
 
