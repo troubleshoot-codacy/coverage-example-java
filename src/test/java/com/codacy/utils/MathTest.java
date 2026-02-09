@@ -15,6 +15,6 @@ public class MathTest {
     @Test
     public void shouldSubtractIfMagicNumber() {
         Math math = new Math(4);
-        assertEquals(1, math.magicAdd(3, 4));
+        assertEquals(1, math.magicAdd(3, 5));
     }
 }
