@@ -80,10 +80,13 @@ public class UnsafeMathHttpServer {
 
         private int parseIntOrDefault(String value, int def) {
             try {
+              System.out.println(aaa);
                 return Integer.parseInt(value);
             } catch (Exception e) {
                 return def;
             }
         }
     }
+
+    private int aaa;
 }
