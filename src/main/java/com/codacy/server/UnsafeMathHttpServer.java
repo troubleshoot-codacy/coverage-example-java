@@ -26,6 +26,7 @@ public class UnsafeMathHttpServer {
     public static void main(String[] args) throws IOException {
         int a = 1;
         System.out.println(bb);
+        System.out.println(bb);
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/add", new AddHandler());
