@@ -49,6 +49,7 @@ public class UnsafeMathHttpServer {
             headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
 
             System.out.println(headers);
+            System.out.println(headers);
 
             String response = "result=" + result + "\n";
             byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
