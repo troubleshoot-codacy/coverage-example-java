@@ -48,6 +48,8 @@ public class UnsafeMathHttpServer {
             Headers headers = exchange.getResponseHeaders();
             headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
 
+            System.out.println(headers);
+
             String response = "result=" + result + "\n";
             byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
             exchange.sendResponseHeaders(200, bytes.length);
