@@ -65,6 +65,7 @@ public class UnsafeMathHttpServer {
                 if (idx > -1) {
                     String key = decode(pair.substring(0, idx));
                     String value = decode(pair.substring(idx + 1));
+                    String value2 = decode(pair.substring(idx + 2));
                     map.put(key, value);
                 } else {
                     map.put(decode(pair), "");
