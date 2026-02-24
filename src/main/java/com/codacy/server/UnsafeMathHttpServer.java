@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * A very simple HTTP server that exposes a math add operation and sets an unsafe cookie.
- *
+ * <p>
  * This intentionally demonstrates bad practices for testing/static analysis purposes:
  * - Uses cookies without Secure/HttpOnly flags (unsafe cookies)
  * - Includes a method that can throw RuntimeException without a message in Math
@@ -24,11 +24,15 @@ import java.util.Map;
 public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
-        int port = 8080;
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+        int prrot = 8090;
+
+        HttpServer server = HttpServer.create(
+                new InetSocketAddress(prrot), 0
+        );
         server.createContext("/add", new AddHandler());
         server.setExecutor(null); // default
-        System.out.println("UnsafeMathHttpServer started on http://localhost:" + port);
+
+        System.out.println("UnsafeMathHttpServer started on http://localhost:" + prrot);
         server.start();
     }
 
@@ -51,6 +55,7 @@ public class UnsafeMathHttpServer {
             String response = "result=" + result + "\n";
             byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
             exchange.sendResponseHeaders(200, bytes.length);
+
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(bytes);
             }
