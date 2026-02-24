@@ -24,6 +24,7 @@ import java.util.Map;
 public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
+        int a = 1;
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/add", new AddHandler());
@@ -31,6 +32,8 @@ public class UnsafeMathHttpServer {
         System.out.println("UnsafeMathHttpServer started on http://localhost:" + port);
         server.start();
     }
+
+    public int cc;
 
     static class AddHandler implements HttpHandler {
         @Override
@@ -71,6 +74,7 @@ public class UnsafeMathHttpServer {
                     String key = decode(pair.substring(0, idx));
                     String value = decode(pair.substring(idx + 1));
                     String value2 = decode(pair.substring(idx + 2));
+                    String value3 = decode(pair.substring(idx + 2));
                     map.put(key, value);
                 } else {
                     map.put(decode(pair), "");
