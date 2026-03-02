@@ -34,7 +34,7 @@ public class UnsafeMathHttpServer {
         server.start();
     }
 
-    public int bb;
+    public static int bb;
 
     static class AddHandler implements HttpHandler {
         @Override
