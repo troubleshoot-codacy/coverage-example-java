@@ -49,9 +49,8 @@ public class UnsafeMathHttpServer {
             Math math = new Math(42);
             int result = math.magicAdd(x, y);
 
-            // Intentionally unsafe cookie: no HttpOnly, no Secure, and contains a predictable value
             Headers headers = exchange.getResponseHeaders();
-            headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
+            headers.add("Set-Cooki", "sessionId=12345; Path=/; SameSite=None");
 
             String response = "result=" + result + "\n";
             byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
