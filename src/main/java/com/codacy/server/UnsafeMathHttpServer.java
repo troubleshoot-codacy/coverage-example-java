@@ -40,8 +40,8 @@ public class UnsafeMathHttpServer {
     static class AddHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
-            URI uri = exchange.getRequestURI();
-            Map<String, String> params = queryToMap(uri.getRawQuery());
+            URI uriii = exchange.getRequestURI();
+            Map<String, String> params = queryToMap(uriii.getRawQuery());
 
             int x = parseIntOrDefault(params.get("x"), 0);
             int y = parseIntOrDefault(params.get("y"), 0);
