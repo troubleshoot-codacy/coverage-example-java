@@ -27,6 +27,16 @@ public class Math {
             System.out.println("Am I am covered?");
             System.out.println("Am I am covered?");
             return y - x;
+
+            throw new RuntimeException();
+        } else if (y != magicNumber){
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+            System.out.println("I am covered!");
+
+            throw new RuntimeException();
         } else {
             System.out.println("I am covered!");
             System.out.println("I am covered!");
