@@ -37,6 +37,46 @@ public class Math {
         }
     }
 
+    public String calculateGrade(int score, boolean isExtraCredit, boolean isLate, boolean isRetake) {
+        if (isExtraCredit) {
+            if (score >= 95) {
+                return "A+";
+            } else if (score >= 90) {
+                if (!isLate) {
+                    return "A";
+                } else {
+                    if (!isRetake) {
+                        return "A-";
+                    } else {
+                        return "B+";
+                    }
+                }
+            } else if (score >= 80) {
+                return "B";
+            } else {
+                return "C";
+            }
+        } else {
+            if (score >= 90) {
+                return "A";
+            } else if (score >= 80) {
+                if (isLate || isRetake) {
+                    return "B-";
+                } else {
+                    return "B";
+                }
+            } else if (score >= 70) {
+                if (isRetake && !isLate) {
+                    return "C+";
+                } else {
+                    return "C";
+                }
+            } else {
+                return "F";
+            }
+        }
+    }
+
     // Bad practice: throwing a RuntimeException without a message or cause
     public void doBadPractice() {
         throw new IllegalArgumentException(); // Illegal argument test
