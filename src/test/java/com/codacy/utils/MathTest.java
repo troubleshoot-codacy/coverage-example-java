@@ -9,6 +9,8 @@ public class MathTest {
     public void shouldAddNumbers() {
         Math math = new Math(23);
 
+        System.out.println();
+
         assertEquals(7, math.magicAdd(3, 4));
     }
 
