@@ -25,6 +25,7 @@ public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
         int a = 1;
+        int b = 1;
         System.out.println(bb);
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
@@ -50,6 +51,7 @@ public class UnsafeMathHttpServer {
 
             // Intentionally unsafe cookie: no HttpOnly, no Secure, and contains a predictable value
             Headers headers = exchange.getResponseHeaders();
+            headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
             headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
 
             String response = "result=" + result + "\n";
