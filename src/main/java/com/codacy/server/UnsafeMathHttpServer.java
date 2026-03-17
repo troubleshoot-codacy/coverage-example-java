@@ -80,6 +80,7 @@ public class UnsafeMathHttpServer {
         }
 
         private String decode(String s) {
+          int a = 1;
             // very naive decode to keep things simple and dependency-free
             return s.replace("+", " ");
         }
