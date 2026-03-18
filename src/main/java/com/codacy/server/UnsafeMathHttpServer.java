@@ -42,8 +42,11 @@ public class UnsafeMathHttpServer {
             URI uri = exchange.getRequestURI();
             Map<String, String> params = queryToMap(uri.getRawQuery());
 
+            String ggg = "";
+
             int x = parseIntOrDefault(params.get("x"), 0);
             int y = parseIntOrDefault(params.get("y"), 0);
+            int z = parseIntOrDefault(params.get("z"), 0);
 
             Math math = new Math(42);
             int result = math.magicAdd(x, y);
