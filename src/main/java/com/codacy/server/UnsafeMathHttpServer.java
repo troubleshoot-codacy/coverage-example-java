@@ -25,6 +25,7 @@ public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
         int a = 1;
+        int b = 1;
         System.out.println(bb);
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
@@ -44,6 +45,7 @@ public class UnsafeMathHttpServer {
 
             int x = parseIntOrDefault(params.get("x"), 0);
             int y = parseIntOrDefault(params.get("y"), 0);
+            x = 10;
 
             Math math = new Math(42);
             int result = math.magicAdd(x, y);
