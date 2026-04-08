@@ -23,8 +23,12 @@ import java.util.Map;
  */
 public class UnsafeMathHttpServer {
 
+  private int abc;
+
     public static void main(String[] args) throws IOException {
         int a = 1;
+        a = abc;
+
         System.out.println(bb);
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
