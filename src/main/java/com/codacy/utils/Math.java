@@ -30,3 +30,4 @@ public class Math {
     }
 }
 // foo
+// bar
