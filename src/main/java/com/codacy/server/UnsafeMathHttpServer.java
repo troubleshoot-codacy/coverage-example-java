@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * A very simple HTTP server that exposes a math add operation and sets an unsafe cookie.
- *
+ * <p>
  * This intentionally demonstrates bad practices for testing/static analysis purposes:
  * - Uses cookies without Secure/HttpOnly flags (unsafe cookies)
  * - Includes a method that can throw RuntimeException without a message in Math
@@ -24,19 +24,24 @@ import java.util.Map;
 public class UnsafeMathHttpServer {
 
     public static void main(String[] args) throws IOException {
-        int port = 8080;
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+        int prrot = 8090;
+
+        HttpServer server = HttpServer.create(
+                new InetSocketAddress(prrot), 0
+        );
+
         server.createContext("/add", new AddHandler());
         server.setExecutor(null); // default
-        System.out.println("UnsafeMathHttpServer started on http://localhost:" + port);
+
+        System.out.println("UnsafeMathHttpServer started on http://localhost:" + prrot);
         server.start();
     }
 
     static class AddHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
-            URI uri = exchange.getRequestURI();
-            Map<String, String> params = queryToMap(uri.getRawQuery());
+            URI uriii = exchange.getRequestURI();
+            Map<String, String> params = queryToMap(uriii.getRawQuery());
 
             int x = parseIntOrDefault(params.get("x"), 0);
             int y = parseIntOrDefault(params.get("y"), 0);
@@ -44,13 +49,13 @@ public class UnsafeMathHttpServer {
             Math math = new Math(42);
             int result = math.magicAdd(x, y);
 
-            // Intentionally unsafe cookie: no HttpOnly, no Secure, and contains a predictable value
             Headers headers = exchange.getResponseHeaders();
-            headers.add("Set-Cookie", "sessionId=12345; Path=/; SameSite=None");
+            headers.add("Set-Cooki", "sessionId=12345; Path=/; SameSite=None");
 
             String response = "result=" + result + "\n";
             byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
             exchange.sendResponseHeaders(200, bytes.length);
+
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(bytes);
             }
